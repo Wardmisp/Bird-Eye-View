@@ -2,22 +2,39 @@
 
 ECE Paris senior year project.
 
-Aiming at creating a bird-eye view from the surroundings of a car, based on cameras placed on the car.
+Aiming at creating a bird-eye view from the surroundings of a car, based on cameras images with segmantic segmentation placed on the car.
 
-##Data
+## Progress 
+- [x] Implementing first model in PyTorch
+- [ ] Importing data (by using already existing data, or exporting data from Carla on our own)
+- [ ] Testing first model
+- [ ] Implementing other NN architecture
+- [ ] Compare the results
+- [ ] Implement other features 
+
+## Data
 
 Our Data will be provided by the CARLA simulator.
 More details incoming later.
 
-##Model
+## Model
 
 We are currently rebuilding 3 models from [this repository](https://github.com/MankaranSingh/Auto-Birds-Eye), using PyTorch Library.
 
-Model 1 : ![image](./Images/model_AE1.png)
+<details>
+	<summary> Model 1 (click to expand) </summary>
+	![image](./Images/model_AE1.png)
+</details>
 
-Model 2 : ![image](./Images/model_AE2.png)
+<details>
+	<summary> Model 2 (click to expand) </summary>
+	![image](./Images/model_AE2.png)
+</details>
 
-Model 3 : ![image](./Images/model_Unet.png)
+<details>
+	<summary> Model 3 (click to expand) </summary>
+	![image](./Images/model_Unet.png)
+</details>
 
 
 
