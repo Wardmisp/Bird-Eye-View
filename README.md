@@ -24,19 +24,19 @@ We are currently rebuilding 3 models from [this repository](https://github.com/M
 <details>
 	<summary> Model 1 (click to expand) </summary>
 
-	![AE1](/Images/model_AE1.png)
+![AE1](/Images/model_AE1.png)
 </details>
 
 <details>
 	<summary> Model 2 (click to expand) </summary>
 
-	![AE2](/Images/model_AE2.png)
+![AE2](/Images/model_AE2.png)
 </details>
 
 <details>
 	<summary> Model 3 (click to expand) </summary>
 
-	![Unet](./Images/model_Unet.png)
+![Unet](./Images/model_Unet.png)
 </details>
 
 
