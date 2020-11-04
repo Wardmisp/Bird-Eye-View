@@ -23,16 +23,19 @@ We are currently rebuilding 3 models from [this repository](https://github.com/M
 
 <details>
 	<summary> Model 1 (click to expand) </summary>
+
 	![image](./Images/model_AE1.png)
 </details>
 
 <details>
 	<summary> Model 2 (click to expand) </summary>
+
 	![image](./Images/model_AE2.png)
 </details>
 
 <details>
 	<summary> Model 3 (click to expand) </summary>
+
 	![image](./Images/model_Unet.png)
 </details>
 
