@@ -34,7 +34,7 @@ We are currently rebuilding 3 models from [this repository](https://github.com/M
 </details>
 
 <details>
-	<summary> Model 3 (click to expand) </summary>
+	<summary> Unet (click to expand) </summary>
 
 ![Unet](./Images/model_Unet.png)
 </details>
