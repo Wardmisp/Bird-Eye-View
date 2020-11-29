@@ -12,6 +12,9 @@ Aiming at creating a bird-eye view from the surroundings of a car, based on came
 - [ ] Compare the results
 - [ ] Implement other features 
 
+## Issue  
+- problem to convert the parameter from Keras to Pytorch (especially padding:'same') 
+
 ## Data
 
 Our Data will be provided by the CARLA simulator.
