@@ -14,7 +14,8 @@ Aiming at creating a bird-eye view from the surroundings of a car, based on came
 
 ## Issue  
 <details>
-<summary> - problem to convert the parameter from Keras to Pytorch (especially padding:'same'):</summary> 'Same' padding means the size of output feature-maps are the same as the input feature-maps (under the assumption of  stride=1 ). For instance, if input is  nin  channels with feature-maps of size  28×28 , then in the output you expect to get  nout  feature maps each of size  28×28  as well.</br>
+<summary> - problem to convert the parameter from Keras to Pytorch (especially padding:'same'):</summary> 
+__Issue details:__ 'Same' padding means the size of output feature-maps are the same as the input feature-maps (under the assumption of  stride=1 ). For instance, if input is  nin  channels with feature-maps of size  28×28 , then in the output you expect to get  nout  feature maps each of size  28×28  as well. Somehow, Pytorch does not has this option.</br>
 __Solution :__</br>
 with W:input volume size, F:kernel size, S:stride, P:amount of padding we have this formula output volume = (W-F+2P)/S+1
 </details>
