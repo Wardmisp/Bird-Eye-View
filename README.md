@@ -44,8 +44,9 @@ We are currently rebuilding 3 models from [this repository](https://github.com/M
 <details>
 	<summary> Unet (Rémi) (click to expand) </summary>
 
-![Unet](./Images/model_Unet.png)
-Après implémentation en PyTorch:
+![Unet](./Images/model_Unet.png)></br>
+
+**Après implémentation en PyTorch:**</br>
 ![UnetInfo](./Images/Unet_info.JPG)
 </details>
 
