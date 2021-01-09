@@ -68,4 +68,16 @@ Mesure la performance d’un modèle dont la sortie est une valeur de probabilit
 
 De manière générale, on ne peut pas prédire quelle fonction sera la plus efficace sur un set de données particulier, la meilleure solution est donc de toutes les tester et de comparer les résultats.
 
+### Custom Loss-Function
+
+Définie sous le nom "Custom_loss", il s'agit d'une Loss Function créée par l'auteur du Github et déclarée comme une combinaison de la Dice-Coefficient et de la SSIM :
+Custom_loss = Dice_coef + 5 * SSIM_loss
+Une explication peut venir de l'architecture des Autoencodeurs. De manière idéale, un modèle Autoencodeur offre un juste milieu entre :
+- Une sensibilité aux données en entrée pour reconstruire la représentation de manière assez précise.
+- Une insensibilité aux données en entrée pour "décourager" le modèle à mémoriser les entrées et donc éviter un surchargement.
+Ainsi, on oblige le modèle à ne conserver que les variations de données nécessaires à la reconstruction de l'image et éviter les redondances. Pour ce faire, il faut construire une Loss Function avec un terme qui sensibilise le modèle aux données en entrée (ici le Dice_coef) et on y ajoute un terme de décourager le modèle appelé "régularisateur" (ici le SSIM_loss). De plus, on introduit un facteur d'échelle devant le régularisateur pour gérer l'équilibre entre les deux objectifs (ici on utilise 5) [1].
+
+[1] Jeremy Jordan «Introduction to Autoencoders». 19 March 2018. Jeremyjordan.me
+https://www.jeremyjordan.me/autoencoders/
+
 By [Davide](https://github.com/Davide-gtr), [Loic](https://github.com/Loicmag) and [Rémi](https://github.com/Wardmisp)
