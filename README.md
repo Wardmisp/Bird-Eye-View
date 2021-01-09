@@ -52,8 +52,6 @@ We are currently rebuilding 3 models from [this repository](https://github.com/M
 
 ## Loss Functions
 
-Il y a trois différentes Loss-Functions :
-
 ### SSIM (Structural Similarity Index)
 C'est une métrique qui permet de mesurer la similarité de structure de deux images (plutôt qu’une différence pixel à pixel). Elle est utilisée en tant que « loss function », en prenant en compte la luminance, le contraste et la structure. Permet de mesurer la qualité d’une image compressée par rapport à l’image originale. Vise à reproduire la vision humaine.
 Performances : semble être peu précis (moins que prévu) et conçu comme une mesure de qualité d’images fixes.
