@@ -51,20 +51,30 @@ We are currently rebuilding 3 models from [this repository](https://github.com/M
 </details>
 
 ## Loss Functions
-
-### SSIM (Structural Similarity Index)
+<details>
+	
+<summary> 
+	### SSIM (Structural Similarity Index) 
+</summary>
 C'est une métrique qui permet de mesurer la similarité de structure de deux images (plutôt qu’une différence pixel à pixel). Elle est utilisée en tant que « loss function », en prenant en compte la luminance, le contraste et la structure. Permet de mesurer la qualité d’une image compressée par rapport à l’image originale. Vise à reproduire la vision humaine.
 Performances : semble être peu précis (moins que prévu) et conçu comme une mesure de qualité d’images fixes.
+</details>
 
-### Dice-Coefficient Loss (region-based)
-
+<details>
+<summary>
+	### Dice-Coefficient Loss (region-based)
+</summary>
 Ce coefficient est un indicateur statistique qui mesure la similarité entre deux échantillons. Souvent comparée à la Cross-Entropy : l’objectif est de maximiser la mesure du coefficient Dice. L’entropie croisée n’est qu’une approximation et est plus facile à maximiser en utilisant la rétropropagation. De plus, le coefficient Dice est plus performant pour les problèmes de déséquilibre de classe par conception (c’est un problème de classification : les classes ne sont pas représentées de manière égales, ce qui augmente les difficultés d’apprentissage de l’algorithme).
+</details>
 
-### Cross-Entropy Loss (distribution-based)
-
+<details>
+<summary>	
+	### Cross-Entropy Loss (distribution-based)
+</summary>
 Mesure la performance d’un modèle dont la sortie est une valeur de probabilité située entre 0 et 1, en mesurant la distance entre la valeur prédite et la valeur réelle. Plus la valeur prédite s’écarte de la valeur réelle, plus la « Cross-Entropy Loss » augmente : ainsi, un modèle parfait aurait une perte de 0. Le score associé à chaque probabilité est calculé à partir d’un logarithme : ainsi, plus les grandes différences proches de 1 le score est élevé et les petites différences proches de 0 obtiennent des scores faibles. 
 
 De manière générale, on ne peut pas prédire quelle fonction sera la plus efficace sur un set de données particulier, la meilleure solution est donc de toutes les tester et de comparer les résultats.
+</details>
 
 ### Custom Loss-Function
 
