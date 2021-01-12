@@ -76,8 +76,10 @@ Mesure la performance d’un modèle dont la sortie est une valeur de probabilit
 De manière générale, on ne peut pas prédire quelle fonction sera la plus efficace sur un set de données particulier, la meilleure solution est donc de toutes les tester et de comparer les résultats.
 </details>
 
-### Custom Loss-Function
-
+<details>
+<summary>
+	### Custom Loss-Function
+</summary>
 Définie sous le nom "Custom_loss", il s'agit d'une Loss Function créée par l'auteur du Github et déclarée comme une combinaison de la Dice-Coefficient et de la SSIM :
 Custom_loss = Dice_coef + 5 * SSIM_loss
 Une explication peut venir de l'architecture des Autoencodeurs. De manière idéale, un modèle Autoencodeur offre un juste milieu entre :
@@ -87,5 +89,5 @@ Ainsi, on oblige le modèle à ne conserver que les variations de données néce
 
 [1] Jeremy Jordan «Introduction to Autoencoders». 19 March 2018. Jeremyjordan.me
 https://www.jeremyjordan.me/autoencoders/
-
+</details>
 By [Davide](https://github.com/Davide-gtr), [Loic](https://github.com/Loicmag) and [Rémi](https://github.com/Wardmisp)
