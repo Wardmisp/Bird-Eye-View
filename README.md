@@ -43,11 +43,13 @@ We are currently rebuilding 3 models from [this repository](https://github.com/M
 
 <details>
 	<summary> Unet (Rémi) (click to expand) </summary>
-
-![Unet](./Images/model_Unet.png)></br>
-
-**Après implémentation en PyTorch:**</br>
-![UnetInfo](./Images/Unet_info.JPG)
+<details>
+	<summary> Click to see Unet's graph </summary>
+![Unet](./Images/model_Unet.png)</br>
+</details>
+</br>
+**Comparaison après implémentation en PyTorch/Implémentation initiale avec Keras:**</br>
+![UnetInfo](./Images/Unet_info.JPG) ![UnetInfo0](.Images/First_unet_summary.JPG
 </details>
 
 ## Loss Functions
