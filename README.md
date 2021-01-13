@@ -47,7 +47,7 @@ We are currently rebuilding 3 models from [this repository](https://github.com/M
 
 Comparaison après implémentation en PyTorch/Implémentation initiale avec Keras:</br>
 ![UnetInfo](./Images/Unet_info.JPG)</br>
-![UnetInfo0](.Images/First_unet_summary.JPG)
+![UnetInfo0](./Images/First_unet_summary.JPG)
 </details>
 
 ## Loss Functions
