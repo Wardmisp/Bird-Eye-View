@@ -11,7 +11,7 @@ model = torch.load(name_file, map_location=torch.device("cpu"))
 model.eval()
 
 # Chargement de l'image à donner en entrée (ici : issu du dataset)
-image_dataset = np.load('./1.npy')
+image_dataset = np.load('./data/1.npy')
 
 image_dataset_preprocess = torch.tensor(transfo_image(image_dataset), dtype=torch.float).permute(0,3,1,2)
 print(image_dataset_preprocess.shape)
