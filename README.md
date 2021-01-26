@@ -8,8 +8,8 @@ Aiming at creating a bird-eye view from the surroundings of a car, based on came
 - [x] Implementing first model in PyTorch
 - [x] Importing and preprocessing data (by using already existing data, or exporting data from Carla on our own)
 - [x] Testing first model
-- [] Implementing other NN architecture
-- [] Compare the results
+- [ ] Implementing other NN architecture
+- [ ] Compare the results
 - [ ] Implement other features 
 
 ## Issue  
