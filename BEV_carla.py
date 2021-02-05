@@ -33,10 +33,7 @@ global image_z
 def neural_network(model, image):
     a = torch.tensor(transfo_image(image), dtype=torch.float).permute(0,3,1,2)
     pred = preprocess(model(a))
-    image = labels_to_cityscapes_palette(pred)
-    image=cv2.resize(image,(500,500))
-    cv2.imshow("Front camera", image)
-    cv2.waitKey(1)
+
     return pred
 
 # Fonction permettant d'afficher la caméra à segmentation sémantique
