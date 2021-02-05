@@ -93,7 +93,7 @@ try:
 
        # Chargement du réseau de neurones
  
-       name_file = './models/bev_nadam_40epoch.pth'
+       name_file = './bev_nadam_40epoch.pth'
        model = get_model()
        model.load_state_dict(torch.load(name_file, map_location=torch.device("cpu")))
        model.eval()
