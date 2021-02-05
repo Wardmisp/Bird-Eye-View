@@ -108,10 +108,9 @@ Once the neural networks had been transcribed and trained, we wanted to integrat
 Then you need to launch the Carla simulator and wait for the software to fully load. 
 Once Carla is launched, open the command prompt (cmd) and go to the folder where your downloaded scripts are located. 
 Finally, run the following command  :
-'''
+"""
 python BEV_carla.py
-'''
-
+"""
 Warning: it often happens that it doesn't work the first time (connection error to Carla), so you have to try again several times before it works. 
 
 
