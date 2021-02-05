@@ -20,6 +20,13 @@ __Solution :__</br>
 with W:input volume size, F:kernel size, S:stride, P:amount of padding we have this formula output volume = (W-F+2P)/S+1
 </details>
 
+<details>
+<summary> - The output is noisy:</summary> 
+__Issue details:__ The output of the current network is too noisy to be properly used.</br>
+__Solution :__</br>
+Try to change the network architecture.
+</details>
+
 ## Data
 
 Our Data will be provided by the CARLA simulator.
