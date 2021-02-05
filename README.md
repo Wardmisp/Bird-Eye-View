@@ -37,13 +37,13 @@ More details incoming later.
 We are currently rebuilding 3 models from [this repository](https://github.com/MankaranSingh/Auto-Birds-Eye), using PyTorch Library.
 
 <details>
-	<summary> Deeper Autoencoder (Davide) (click to expand) </summary>
+	<summary> Deeper Autoencoder (Loïc) (click to expand) </summary>
 
 ![AE1](/Images/model_AE1.png)
 </details>
 
 <details>
-	<summary> Autoencoder (Loïc) (click to expand) </summary>
+	<summary> Autoencoder (Davide) (click to expand) </summary>
 
 ![AE2](/Images/model_AE2.png)
 </details>
