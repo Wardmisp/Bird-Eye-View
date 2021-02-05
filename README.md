@@ -63,36 +63,36 @@ Comparaison après implémentation en PyTorch/Implémentation initiale avec Kera
 <summary> 
 	### SSIM (Structural Similarity Index) 
 </summary>
-C'est une métrique qui permet de mesurer la similarité de structure de deux images (plutôt qu’une différence pixel à pixel). Elle est utilisée en tant que « loss function », en prenant en compte la luminance, le contraste et la structure. Permet de mesurer la qualité d’une image compressée par rapport à l’image originale. Vise à reproduire la vision humaine.
-Performances : semble être peu précis (moins que prévu) et conçu comme une mesure de qualité d’images fixes.
+It is a metric that measures the structural similarity of two images (rather than a pixel-to-pixel difference). It is used as a “loss function”, taking into account luminance, contrast and structure. Used to measure the quality of a compressed image compared to the original image. Aims to reproduce human vision.
+Performance: Appears to be imprecise (less than expected) and intended as a measure of still image quality.
 </details>
 
 <details>
 <summary>
 	Dice-Coefficient Loss (region-based)
 </summary>
-Ce coefficient est un indicateur statistique qui mesure la similarité entre deux échantillons. Souvent comparée à la Cross-Entropy : l’objectif est de maximiser la mesure du coefficient Dice. L’entropie croisée n’est qu’une approximation et est plus facile à maximiser en utilisant la rétropropagation. De plus, le coefficient Dice est plus performant pour les problèmes de déséquilibre de classe par conception (c’est un problème de classification : les classes ne sont pas représentées de manière égales, ce qui augmente les difficultés d’apprentissage de l’algorithme).
+This coefficient is a statistical indicator that measures the similarity between two samples. Often compared to Cross-Entropy: the goal is to maximize the measurement of the Dice coefficient. Cross entropy is only an approximation and is easier to maximize using backpropagation. In addition, the Dice coefficient performs better for class imbalance problems by design (this is a classification problem: the classes are not represented equally, which increases the learning difficulties of the algorithm).
 </details>
 
 <details>
 <summary>	
 	Cross-Entropy Loss (distribution-based)
 </summary>
-Mesure la performance d’un modèle dont la sortie est une valeur de probabilité située entre 0 et 1, en mesurant la distance entre la valeur prédite et la valeur réelle. Plus la valeur prédite s’écarte de la valeur réelle, plus la « Cross-Entropy Loss » augmente : ainsi, un modèle parfait aurait une perte de 0. Le score associé à chaque probabilité est calculé à partir d’un logarithme : ainsi, plus les grandes différences proches de 1 le score est élevé et les petites différences proches de 0 obtiennent des scores faibles. 
+Measures the performance of a model whose output is a probability value between 0 and 1, by measuring the distance between the predicted value and the true value. The more the predicted value deviates from the real value, the more the “Cross-Entropy Loss” increases: thus, a perfect model would have a loss of 0. The score associated with each probability is calculated from a logarithm: thus, the higher the large differences close to 1 the score is high and the small differences close to 0 obtain low scores.
 
-De manière générale, on ne peut pas prédire quelle fonction sera la plus efficace sur un set de données particulier, la meilleure solution est donc de toutes les tester et de comparer les résultats.
+In general, we cannot predict which function will be the most efficient on a particular set of data, so the best solution is to test them all and compare the results. 
 </details>
 
 <details>
 <summary>
 	Custom Loss-Function
 </summary>
-Définie sous le nom "Custom_loss", il s'agit d'une Loss Function créée par l'auteur du Github et déclarée comme une combinaison de la Dice-Coefficient et de la SSIM :
+Defined under the name "Custom_loss", this is a Loss Function created by the author of the Github and declared as a combination of the Dice-Coefficient and the SSIM:
 Custom_loss = Dice_coef + 5 * SSIM_loss
-Une explication peut venir de l'architecture des Autoencodeurs. De manière idéale, un modèle Autoencodeur offre un juste milieu entre :
-- Une sensibilité aux données en entrée pour reconstruire la représentation de manière assez précise.
-- Une insensibilité aux données en entrée pour "décourager" le modèle à mémoriser les entrées et donc éviter un surchargement.
-Ainsi, on oblige le modèle à ne conserver que les variations de données nécessaires à la reconstruction de l'image et éviter les redondances. Pour ce faire, il faut construire une Loss Function avec un terme qui sensibilise le modèle aux données en entrée (ici le Dice_coef) et on y ajoute un terme de décourager le modèle appelé "régularisateur" (ici le SSIM_loss). De plus, on introduit un facteur d'échelle devant le régularisateur pour gérer l'équilibre entre les deux objectifs (ici on utilise 5) [1].
+An explanation can come from the architecture of Autoencoders. Ideally, an Autoencoder model strikes a balance between:
+- A sensitivity to the input data to reconstruct the representation in a fairly precise way.
+- Insensitivity to the input data to "discourage" the model from memorizing the inputs and therefore to avoid overloading.
+Thus, the model is forced to keep only the data variations necessary for the reconstruction of the image and to avoid redundancies. To do this, we must build a Loss Function with a term that sensitizes the model to the input data (here the Dice_coef) and we add a term to discourage the model called "regularizer" (here the SSIM_loss). In addition, we introduce a scale factor in front of the regularizer to manage the balance between the two objectives (here we use 5) [1].
 
 [1] Jeremy Jordan «Introduction to Autoencoders». 19 March 2018. Jeremyjordan.me
 https://www.jeremyjordan.me/autoencoders/
