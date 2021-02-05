@@ -116,10 +116,10 @@ Warning: it often happens that it doesn't work the first time (connection error 
 # Results
 ## Result with an input image
 The Autoencoder has been trained during 4h30.
-![image_bev_result](image_bev_result.JPG)
+![image_bev_result](Images/image_bev_result.JPG)
 
 ## Click on the image to watch the video
-[![Alt text for your video](bev.JPG)](https://www.youtube.com/watch?fbclid=IwAR2LE4NIfBZjK7qaERm2dvhU2cxUrvSJm3-ag0uTlfW8-OJuxWaRxV7-XEc&v=HGx4nbYseJs&feature=youtu.be)
+[![Alt text for your video](Images/bev.JPG)](https://www.youtube.com/watch?fbclid=IwAR2LE4NIfBZjK7qaERm2dvhU2cxUrvSJm3-ag0uTlfW8-OJuxWaRxV7-XEc&v=HGx4nbYseJs&feature=youtu.be)
 
 
 
