@@ -113,5 +113,8 @@ python BEV_carla.py
 ```
 Warning: it often happens that it doesn't work the first time (connection error to Carla), so you have to try again several times before it works. 
 
+# Results
+## Click on the image to watch the video
+[![Alt text for your video](bev.jpg)](https://www.youtube.com/watch?fbclid=IwAR2LE4NIfBZjK7qaERm2dvhU2cxUrvSJm3-ag0uTlfW8-OJuxWaRxV7-XEc&v=HGx4nbYseJs&feature=youtu.be)
 
 By [Davide](https://github.com/Davide-gtr), [Loic](https://github.com/Loicmag) and [Rémi](https://github.com/Wardmisp)
