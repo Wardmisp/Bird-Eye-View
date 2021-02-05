@@ -100,10 +100,11 @@ https://www.jeremyjordan.me/autoencoders/
 
 ## Intégration à Carla (Windows)
 
-Once the neural networks had been transcribed and trained, we wanted to integrate them into the Carla simulator to obtain a real-time evolution of the Bird-Eye View. In order to reproduce this camera, all you have to do is download the following files and place them in the same folder : 
+Once the neural networks had been transcribed and trained, we wanted to integrate them into the Carla simulator to obtain a real-time evolution of the Bird-Eye View. In order to reproduce this camera, all you have to do is download the following files and place them in the same folder with the folder carlaFile : 
 - "BEV_carla.py" Python script to display the Bird-Eye View .
 - "utilBEV.py" Python script to apply the necessary transformations to the network input data.
 - "autoencoder.py" Python script containing the Autoencoder type neural network.
+- "bev_nadam_40epoch.pth" the model to test or implement
 
 Then you need to launch the Carla simulator and wait for the software to fully load. 
 Once Carla is launched, open the command prompt (cmd) and go to the folder where your downloaded scripts are located. 
