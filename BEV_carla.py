@@ -7,7 +7,7 @@ import os
 import sys
 from time import sleep
 from utilBEV import *
-from BEVNetwork import *
+from autoencoder import *
 from keras.models import load_model
 
 import matplotlib.pyplot as plt
