@@ -62,14 +62,14 @@ Performances : semble être peu précis (moins que prévu) et conçu comme une m
 
 <details>
 <summary>
-	### Dice-Coefficient Loss (region-based)
+	Dice-Coefficient Loss (region-based)
 </summary>
 Ce coefficient est un indicateur statistique qui mesure la similarité entre deux échantillons. Souvent comparée à la Cross-Entropy : l’objectif est de maximiser la mesure du coefficient Dice. L’entropie croisée n’est qu’une approximation et est plus facile à maximiser en utilisant la rétropropagation. De plus, le coefficient Dice est plus performant pour les problèmes de déséquilibre de classe par conception (c’est un problème de classification : les classes ne sont pas représentées de manière égales, ce qui augmente les difficultés d’apprentissage de l’algorithme).
 </details>
 
 <details>
 <summary>	
-	### Cross-Entropy Loss (distribution-based)
+	Cross-Entropy Loss (distribution-based)
 </summary>
 Mesure la performance d’un modèle dont la sortie est une valeur de probabilité située entre 0 et 1, en mesurant la distance entre la valeur prédite et la valeur réelle. Plus la valeur prédite s’écarte de la valeur réelle, plus la « Cross-Entropy Loss » augmente : ainsi, un modèle parfait aurait une perte de 0. Le score associé à chaque probabilité est calculé à partir d’un logarithme : ainsi, plus les grandes différences proches de 1 le score est élevé et les petites différences proches de 0 obtiennent des scores faibles. 
 
@@ -78,7 +78,7 @@ De manière générale, on ne peut pas prédire quelle fonction sera la plus eff
 
 <details>
 <summary>
-	### Custom Loss-Function
+	Custom Loss-Function
 </summary>
 Définie sous le nom "Custom_loss", il s'agit d'une Loss Function créée par l'auteur du Github et déclarée comme une combinaison de la Dice-Coefficient et de la SSIM :
 Custom_loss = Dice_coef + 5 * SSIM_loss
@@ -90,4 +90,18 @@ Ainsi, on oblige le modèle à ne conserver que les variations de données néce
 [1] Jeremy Jordan «Introduction to Autoencoders». 19 March 2018. Jeremyjordan.me
 https://www.jeremyjordan.me/autoencoders/
 </details>
+
+## Intégration à Carla (Windows)
+
+Une fois que les réseaux de neurones ont été retranscrits et entraînés, nous avons souhaité les intégrer au simulateur Carla pour obtenir une évolution en temps réel de la Bird-Eye View. Afin de reproduire cette caméra, il suffit de télécharger les fichiers suivants et de les placer dans un même dossier : 
+- "BEV_carla.py" script Python permettant d'afficher la Bird-Eye View
+- "utilBEV.py" script Python permettant d'appliquer les transformations nécessaires sur les données en entrée du réseau
+- "autoencoder.py" script Python contenant le réseau de neurone de type Autoencoder
+Ensuite il vous faut lancer le simulateur Carla et attendre que le logiciel se charge complètement.
+Une fois que Carla est lancé, ouvrez l'invite de commande (cmd) et placez vous dans le dossier où se trouvent vos scripts téléchargés.
+Finalement, lancez la commande suivante : "python BEV_carla.py".
+
+Attention : il arrive très souvent que cela ne marche pas du premier coup (erreur de connexion à Carla), il vous faut alors réessayer plusieurs fois avant que ça marche.
+
+
 By [Davide](https://github.com/Davide-gtr), [Loic](https://github.com/Loicmag) and [Rémi](https://github.com/Wardmisp)
