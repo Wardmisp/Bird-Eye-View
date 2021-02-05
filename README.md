@@ -94,9 +94,10 @@ https://www.jeremyjordan.me/autoencoders/
 ## Intégration à Carla (Windows)
 
 Une fois que les réseaux de neurones ont été retranscrits et entraînés, nous avons souhaité les intégrer au simulateur Carla pour obtenir une évolution en temps réel de la Bird-Eye View. Afin de reproduire cette caméra, il suffit de télécharger les fichiers suivants et de les placer dans un même dossier : 
-- "BEV_carla.py" script Python permettant d'afficher la Bird-Eye View
-- "utilBEV.py" script Python permettant d'appliquer les transformations nécessaires sur les données en entrée du réseau
-- "autoencoder.py" script Python contenant le réseau de neurone de type Autoencoder
+- "BEV_carla.py" script Python permettant d'afficher la Bird-Eye View.
+- "utilBEV.py" script Python permettant d'appliquer les transformations nécessaires sur les données en entrée du réseau.
+- "autoencoder.py" script Python contenant le réseau de neurone de type Autoencoder.
+
 Ensuite il vous faut lancer le simulateur Carla et attendre que le logiciel se charge complètement.
 Une fois que Carla est lancé, ouvrez l'invite de commande (cmd) et placez vous dans le dossier où se trouvent vos scripts téléchargés.
 Finalement, lancez la commande suivante : "python BEV_carla.py".
