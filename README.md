@@ -114,7 +114,14 @@ python BEV_carla.py
 Warning: it often happens that it doesn't work the first time (connection error to Carla), so you have to try again several times before it works. 
 
 # Results
+## Result with an input image
+The Autoencoder has been trained during 4h30.
+
+(result_bev.jpg)
+
 ## Click on the image to watch the video
 [![Alt text for your video](bev.JPG)](https://www.youtube.com/watch?fbclid=IwAR2LE4NIfBZjK7qaERm2dvhU2cxUrvSJm3-ag0uTlfW8-OJuxWaRxV7-XEc&v=HGx4nbYseJs&feature=youtu.be)
+
+
 
 By [Davide](https://github.com/Davide-gtr), [Loic](https://github.com/Loicmag) and [Rémi](https://github.com/Wardmisp)
